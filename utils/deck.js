@@ -21,3 +21,21 @@ export function createCard(rank, suite){
 
 //  console.log(compareCards({value:23},{value:23}));
  
+export function createDeck(){
+    const cards = [2,3,4,5,6,7,8,9,10,"J","Q","K","A"]
+    const suit = ["H", "C", "D", "S"]
+    let fullCards = []
+
+    for (let i=0; i< suit.length; i++){
+        // console.log(suit[i]);
+        
+        for (let j=0; j< cards.length; j++){
+            // console.log(cards[j]);
+            
+           fullCards.push({suit:suit[i],card:cards[j]}) 
+        }
+    }
+    return fullCards
+}
+
+console.log(createDeck().length);
