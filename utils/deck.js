@@ -32,10 +32,10 @@ export function createDeck(){
         for (let j=0; j< cards.length; j++){
             // console.log(cards[j]);
             
-           fullCards.push({suit:suit[i],card:cards[j]}) 
+           fullCards.push(createCard(cards[j],suit[i])) 
         }
     }
     return fullCards
 }
 
-console.log(createDeck().length);
+console.log(createDeck());
