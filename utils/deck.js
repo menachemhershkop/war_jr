@@ -34,3 +34,24 @@ export function createDeck(){
     }
     return fullCards
 }
+
+export function shuffle(deck){
+    for (let i=0; i<1000; i++){
+        const index1 = Math.floor(Math.random()*deck.length)
+        const index2 = Math.floor(Math.random()*deck.length)
+        if (index1 == index2){
+            i=i-1
+        }
+        else {
+            let temp= null
+
+            temp = deck[index1]  
+            deck[index1] = deck[index2] 
+            deck[index2] = temp
+        }
+    }
+    return deck
+}
+
+let deck = createDeck()
+console.log(shuffle(deck));
