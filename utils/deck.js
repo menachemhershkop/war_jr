@@ -6,7 +6,6 @@ export function createCard(rank, suite){
   }
 }
 
-// console.log(createCard("6","H"));
  export function compareCards(p1Cards,p2Cards){
     if (p1Cards["value"]> p2Cards["value"]){
         return "p1 is won"
@@ -18,8 +17,6 @@ export function createCard(rank, suite){
         return "War!!!"
     }
  }
-
-//  console.log(compareCards({value:23},{value:23}));
  
 export function createDeck(){
     const cards = [2,3,4,5,6,7,8,9,10,"J","Q","K","A"]
@@ -38,4 +35,4 @@ export function createDeck(){
     return fullCards
 }
 
-console.log(createDeck().length);
+
