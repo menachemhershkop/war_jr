@@ -1,9 +1,23 @@
 export function createCard(rank, suite){
   const cards = {"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10,"J":11,"Q":12,"K":13,"A":14}
-  const type = ["H","C","D","S"]
+//   const type = ["H","C","D","S"]
   if (rank in cards){
     return {"rank":rank,"suite":suite,"value":cards[rank]}
   }
 }
 
 // console.log(createCard("6","H"));
+ export function compareCards(p1Cards,p2Cards){
+    if (p1Cards["value"]> p2Cards["value"]){
+        return "p1 is won"
+    }
+    else if (p1Cards["value"]< p2Cards["value"]){
+        return "p2 is won"
+    }
+    else {
+        return "War!!!"
+    }
+ }
+
+//  console.log(compareCards({value:23},{value:23}));
+ 
