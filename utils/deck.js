@@ -6,4 +6,3 @@ export function createCard(rank, suite){
   }
 }
 
-// console.log(createCard("6","H"));
